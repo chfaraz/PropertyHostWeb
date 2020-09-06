@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import "./App.css";
 
@@ -15,10 +16,16 @@ import AgentSignUp from "./Components/AgentSignUp";
 import ThreeDTourRequest from "./Components/ThreeDTourRequest";
 
 import { Route, Switch } from "react-router-dom";
+=======
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
+>>>>>>> parent of 931231c... my first commit
 
 function App() {
   return (
     <div className="App">
+<<<<<<< HEAD
       <Nav />
       <Switch>
         <Route path="/" exact component={Home} />
@@ -33,6 +40,22 @@ function App() {
         <Route path="/threeDTourRequest" component={ThreeDTourRequest} />
         <Route path="/liveSearch" component={LiveSearch} />
       </Switch>
+=======
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+>>>>>>> parent of 931231c... my first commit
     </div>
   );
 }
