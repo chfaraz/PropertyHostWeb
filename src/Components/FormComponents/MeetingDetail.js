@@ -1,4 +1,5 @@
 import React from "react";
+import Input from "./Input";
 
 const meetingDetail = (props) => {
   return (
@@ -33,10 +34,8 @@ const meetingDetail = (props) => {
         <br />
         <h4>Available Time</h4>
         <br />
-        <label>From</label>
-        <input type="time"></input>
-        <label>Too</label>
-        <input type="time"></input>
+        <Input inputtype="input" type="time" name="from" label="From" />
+        <Input inputtype="input" type="time" name="too" label="Too" />
       </form>
       <div className="next-btn">
         <button onClick={props.click}>Next</button>

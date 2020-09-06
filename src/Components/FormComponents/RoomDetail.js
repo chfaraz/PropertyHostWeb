@@ -1,19 +1,36 @@
 import React from "react";
+import Input from "./Input";
 
 const roomsDetail = (props) => {
   return (
     <div className="basic-form">
       <form>
-        <label>bed Rooms</label>
-        <input type="number"></input>
-        <label>Bath Rooms</label>
-        <input type="number"></input>
-        <label>Parking Space</label>
-        <input type="number"></input>
-        <label>Floors</label>
-        <input type="number"></input>
-        <label>Flooring</label>
-        <input type="text" placeholder="e.g: Wooden, Marbel, Tyle"></input>
+        <Input
+          inputtype="input"
+          type="number"
+          name="bedrooms"
+          label="Bed Rooms"
+        />
+        <Input
+          inputtype="input"
+          type="number"
+          name="bathrooms"
+          label="Bath Rooms"
+        />
+        <Input
+          inputtype="input"
+          type="number"
+          name="parkingspace"
+          label="Parking Space"
+        />
+        <Input inputtype="input" type="number" name="floors" label="Floors" />
+        <Input inputtype="input" type="text" name="flooring" label="Flooring" />
+        <Input
+          inputtype="checkBox"
+          type="checkbox"
+          name="basement"
+          checkboxlabel="Basement"
+        />
       </form>
 
       <div className="next-btn">

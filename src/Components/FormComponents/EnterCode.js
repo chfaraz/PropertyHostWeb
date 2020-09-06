@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Input from "./Input";
 
 const enterCode = () => {
   let password = 222;
@@ -12,7 +13,12 @@ const enterCode = () => {
       <div className="basic-form">
         <h2>Enter Code</h2>
         <form>
-          <input type="number"></input>
+          <Input
+            inputtype="input"
+            type="number"
+            name="code"
+            label="Enter Code"
+          />
           {error}
         </form>
         <div className="signin-btn">

@@ -32,7 +32,9 @@ const list = (props) => {
               <td>03335293844</td>
               <td>2000000</td>
               <td>
-                <button className="no">Delete</button>
+                <button className="no" onClick={props.deleteBtnclick}>
+                  Delete
+                </button>
               </td>
             </tr>
             <tr>

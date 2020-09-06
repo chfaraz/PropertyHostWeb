@@ -1,4 +1,5 @@
 import React from "react";
+import Input from "./Input";
 
 const typePurpose = (props) => {
   return (
@@ -38,8 +39,16 @@ const typePurpose = (props) => {
         ) : null}
         {props.type !== "Plot" ? (
           <article>
-            <label>Build year</label>
-            <input type="number" min="1900" max="2099" step="1" />
+            <Input
+              inputtype="input"
+              type="number"
+              min="1900"
+              max="2099"
+              step="1"
+              name="buildyear"
+              label="Build Year"
+              onChange={props.changedBuildYear}
+            />
           </article>
         ) : null}
       </form>

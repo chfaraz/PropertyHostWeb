@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Input from "./Input";
 
 const forgetPassword = () => {
   return (
@@ -7,8 +8,12 @@ const forgetPassword = () => {
       <div className="basic-form">
         <h2>Forget your Password</h2>
         <form>
-          <label>Phone Number</label>
-          <input type="number"></input>
+          <Input
+            inputtype="input"
+            type="number"
+            name="phonenumber"
+            label="Phone Number"
+          />
         </form>
         <div className="signin-btn">
           <Link to="/login/enterCode">

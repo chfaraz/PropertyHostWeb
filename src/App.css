@@ -6,7 +6,9 @@
 input {
   outline: none;
 }
-
+a {
+  color: #000;
+}
 /*-----------------------------------------------------Nav bar-----------------------------------*/
 .nav-bar {
   display: flex;
@@ -114,14 +116,13 @@ a {
   width: 320px;
   height: 420px;
   text-align: center;
-  border: 1px solid black;
   border-radius: 10px;
-  background: #c7c7c7;
+  background: #ffffff;
   color: rgb(97, 97, 97);
-  box-shadow: 3px 3px 20px 5px #888888;
+  box-shadow: 0px 0px 15px 1px #d4d4d4;
 }
 .card-wraper:hover {
-  box-shadow: 3px 3px 15px 11px #888888;
+  box-shadow: 0px 0px 20px 5px #dfdfdf;
   transition: ease 0.7s;
   transform: scale(1.02, 1.02);
 }
@@ -893,45 +894,69 @@ section > p,
   background: rgb(67, 207, 24);
   color: rgb(0, 0, 0);
 }
-.sell-page form {
-  width: 300px;
+.sell-page form,
+.agent-signup form {
+  width: 350px;
   margin: 0vh auto;
   margin-top: 7vh;
 }
-.sell-page form label {
+
+.Label {
   color: #000;
   font-size: 17px;
-}
-.sell-page form input {
+  margin-top: 10px;
+  margin-bottom: 5px;
   display: block;
-  width: 300px;
-  height: 35px;
+}
+.Input {
+  width: 100%;
+  box-sizing: border-box;
+}
+.input-element {
+  display: block;
   font-size: 19px;
   margin-bottom: 10px;
   border: none;
   border-bottom: 2px solid black;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px 5px;
 }
-.sell-page form input:focus {
+.input-element:focus {
   border-bottom: 2px solid rgb(255, 0, 0);
   box-shadow: 0px 0px 15px -7px red;
   color: red;
   transition: 0.3s ease;
 }
-.sell-page form textarea {
+.checkbox-element {
+  height: 18px;
+  margin-right: 10px;
+  width: 18px;
+}
+.Span {
+  font-size: 19px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.sell-page form textarea,
+.agent-signup form textarea {
   display: block;
-  width: 300px;
   height: 135px;
   font-size: 15px;
   margin-bottom: 10px;
+  border: 1px solid black;
   border-bottom: 2px solid black;
 }
-.sell-page form textarea:focus {
-  border-bottom: 2px solid rgb(255, 0, 0);
-  box-shadow: 0px 0px 15px -7px red;
-  color: red;
-  outline: none;
-}
-.sell-page button {
+
+.sell-page button,
+.agent-signup button {
   width: 120px;
   height: 35px;
   background: #000;
@@ -943,25 +968,36 @@ section > p,
   font-weight: 700;
   font-size: 17px;
 }
-.sell-page button:hover {
+.sell-page button:hover,
+.agent-signup button:hover {
   background: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   border: 1px solid red;
 }
-.sell-page button:active {
+.sell-page button:active,
+.agent-signup button:active {
   transform: scale(0.9, 0.9);
 }
 /*-----------------basic form-----------*/
 .basic-form {
-  width: 300px;
+  width: 350px;
   margin: 0 auto;
 }
 .next-btn {
   width: 240px;
   margin: 20px 30%;
 }
-.basic-form form div {
+.flex-size {
   display: flex;
+}
+.flex-size > select {
+  margin: 37px 0 0 0px;
+}
+select:hover {
+  border-bottom: 2px solid rgb(255, 0, 0);
+  color: red;
+  outline: none;
+  cursor: pointer;
 }
 .basic-form h3 {
   width: 160px;
@@ -969,7 +1005,7 @@ section > p,
 }
 .basic-form select {
   display: block;
-  width: 300px;
+  width: 350px;
   height: 35px;
   font-size: 19px;
   margin-bottom: 10px;
@@ -978,13 +1014,9 @@ section > p,
 }
 .basic-form select:focus {
   border-bottom: 2px solid rgb(255, 0, 0);
-  box-shadow: 0px 0px 15px -7px red;
   color: red;
 }
-.basic-form form div input {
-  width: 210px;
-  margin-right: 10px;
-}
+
 #size-type {
   width: 80px;
 }
@@ -1021,7 +1053,7 @@ section > p,
   margin: 15px auto;
   background-color: rgb(248, 248, 248);
   border-radius: 20px;
-  box-shadow: 0px 8px 15px 8px grey;
+  box-shadow: 0px 0px 18px 1px grey;
 }
 .signin-form h2 {
   margin: 0px 20px 30px 20px;

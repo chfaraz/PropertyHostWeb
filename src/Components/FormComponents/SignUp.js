@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Input from "./Input";
 
 const signUp = () => {
   return (
@@ -7,16 +8,36 @@ const signUp = () => {
       <div className="basic-form">
         <h2>Create your Acount</h2>
         <form>
-          <label>First Name</label>
-          <input type="text"></input>
-          <label>Last Name</label>
-          <input type="text"></input>
-          <label>Phone Number</label>
-          <input type="number"></input>
-          <label>Password</label>
-          <input type="password"></input>
-          <label>Confirm Password</label>
-          <input type="password"></input>
+          <Input
+            inputtype="input"
+            type="text"
+            name="firstname"
+            label="First Name"
+          />
+          <Input
+            inputtype="input"
+            type="text"
+            name="lastname"
+            label="Last Name"
+          />
+          <Input
+            inputtype="input"
+            type="number"
+            name="phonenumber"
+            label="Phone No"
+          />
+          <Input
+            inputtype="input"
+            type="password"
+            name="password"
+            label="Password"
+          />
+          <Input
+            inputtype="input"
+            type="password"
+            name="confirmpassword"
+            label="Confirm Password"
+          />
         </form>
         <div className="signin-btn">
           <Link to="/sell/typePurpose">

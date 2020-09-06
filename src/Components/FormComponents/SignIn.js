@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Input from "./Input";
 
 const signIn = () => {
   return (
@@ -7,10 +8,18 @@ const signIn = () => {
       <div className="basic-form">
         <h2>Sign In to your Acount</h2>
         <form>
-          <label>Phone Number</label>
-          <input type="number"></input>
-          <label>Password</label>
-          <input type="password"></input>
+          <Input
+            inputtype="input"
+            type="text"
+            name="username"
+            label="Phone No:"
+          />
+          <Input
+            inputtype="input"
+            type="password"
+            name="password"
+            label="Password:"
+          />
           <Link to="/login/forgetPassword">
             <p>Forget Password</p>
           </Link>

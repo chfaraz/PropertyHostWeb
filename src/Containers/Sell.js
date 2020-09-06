@@ -8,11 +8,44 @@ import UploadPictures from "../Components/FormComponents/UploadPictures";
 class Sell extends Component {
   state = {
     basic_form: true,
+    basicDetailForm: {
+      title: "",
+      price: "",
+      size: "",
+      sizeType: "",
+      phoneNumer: "",
+      city: "",
+      address: "",
+      description: "",
+    },
     room_detail_form: false,
+    roomDetailForm: {
+      bedRooms: "",
+      bathRooms: "",
+      parkingSpace: "",
+      floors: "",
+      flooring: "",
+      basement: null,
+    },
     type_purpose_form: false,
+    typePurposeform: {
+      purpose: "",
+      type: "Home",
+      propertyDetail: "",
+      buildYear: "",
+    },
     upload_pictures_form: false,
+    uploadPictureForm: {
+      file: "",
+      images: [],
+    },
     meeting_detail_form: false,
-    type: "Home",
+    meetingDetailForm: {
+      dayFrom: "",
+      dayToo: "",
+      timeFrom: "",
+      timeToo: "",
+    },
   };
   showBasicForm = () => {
     this.setState({ basic_form: true });
@@ -50,8 +83,23 @@ class Sell extends Component {
     this.setState({ meeting_detail_form: true });
   };
   handleChange = (e) => {
-    this.setState({ type: e.target.value });
+    const { typePurposeform } = { ...this.state };
+    const currentState = typePurposeform;
+    currentState.type = e.target.value;
+    this.setState({ typePurposeform: currentState });
   };
+
+  handelBuildYearChange = (e) => {
+    const { typePurposeform } = { ...this.state };
+    const currentState = typePurposeform;
+    currentState.buildYear = e.target.value;
+    if (/^[12][0-9]{3}$/) {
+      this.setState({ typePurposeform: currentState });
+    } else {
+      console.log("errreeeeeoooossssaaaaa");
+    }
+  };
+
   render() {
     let clas = "active-form";
     let nav = (
@@ -69,7 +117,7 @@ class Sell extends Component {
           >
             2
           </li>
-          {this.state.type === "Home" ? (
+          {this.state.typePurposeform.type === "Home" ? (
             <ul>
               <li
                 id={this.state.room_detail_form ? clas : null}
@@ -109,6 +157,7 @@ class Sell extends Component {
         </ul>
       </nav>
     );
+
     return (
       <div className="sell-page">
         <h2>Give detail about your Property</h2>
@@ -117,9 +166,9 @@ class Sell extends Component {
         {this.state.type_purpose_form ? (
           <TypePurpose
             click={this.showRoomDetailForm}
-            click1={this.showMeetingForm}
             changed={(e) => this.handleChange(e)}
-            type={this.state.type}
+            type={this.state.typePurposeform.type}
+            changedBuildYear={(e) => this.handelBuildYearChange(e)}
           />
         ) : null}
         {this.state.room_detail_form ? (
